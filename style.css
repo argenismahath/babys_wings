@@ -7,7 +7,7 @@ body{
 }
 
 .title{
-    font-size: 27px;
+    font-size: 32px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     backdrop-filter: blur(10px);
@@ -18,7 +18,7 @@ body{
 }
 
 .material-icons{
-    font-size: 29px !important;
+    font-size: 34px !important;
     font-weight: bold !important;
     line-height: 50px !important;
 }
@@ -26,11 +26,19 @@ body{
 .menu p{
     backdrop-filter: blur(3px);
     height: 30px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-left: 20px;
     text-align: center;
     color: #000;
 }
  
+h1{
+    font-size: 35;
+    backdrop-filter: blur(20px);
+    color: rgb(255, 183, 0);
+    text-align: center;
+    margin-top: 20px;
+    margin-top: 20px;
+}
 /* oleider dev */
