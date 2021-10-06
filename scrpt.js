@@ -1,1 +1,2 @@
-alert("frijoles charros");
+window.alert("frijoles charros");
+prompt("frijoles charros");
