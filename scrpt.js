@@ -8,6 +8,8 @@ chela.addEventListener('click', put);
 
 
 let last = '';
+let last2 = '';
+
 let lastbtn = '';
 let counter = 0;
 container.addEventListener('click', (e) => {
@@ -52,12 +54,20 @@ container.addEventListener('click', (e) => {
 
     console.log(listShow);
     console.log(last);
+
+    //click inside
     try {
-        if (last==e.target.id) {
-            listShow.style.display = 'block';}
-    } catch (e) {
+         if (counter>0){
+    
+            if (last==e.target.id) {
+
+    //         listShow.style.display = 'block';}
+
+    //     else{listShow.style.display='none'}  
+    //     }
+    // } catch (e) {
         
-    }
+    // }
 
     //rotate icon menu
     try {
@@ -77,12 +87,13 @@ container.addEventListener('click', (e) => {
 
     }
 
-    last = e.target.id;
+    last2 = e.target.id;
+    last=listShow
     lastbtn = listbtn;
     
     console.log(last+ listShow);
 
-});
+};
 
 function open() {
     console.log("")
