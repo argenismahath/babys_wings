@@ -1,9 +1,48 @@
 let boton=document.querySelector('#close-button');
 let ventana=document.querySelector('#window-notice');
-let chelaL=document.querySelector('#chela-list');
+var chelaL=document.querySelector('#chela-list');
 let chela=document.querySelector('#chela');
+let container=document.querySelector('#container');
 chela.addEventListener('click', put);
 boton.addEventListener('click', cerrar);
+
+
+let last='';
+container.addEventListener('click', (e) => {
+
+    let show=e.target.id+'_m';
+
+    let listShow=document.querySelector('#'+show);
+    console.log(listShow.style.display);
+
+    
+    last=listShow;
+
+    try {
+        if (listShow.style.display=='none') {
+    
+            listShow.style.display='block';
+            
+        }else if(listShow.style.display=='flex'){
+    
+            listShow.style.display='block';
+    
+        }else if(listShow.style.display=='block'){
+            listShow.style.display='none';
+        }else{
+            listShow.style.display='block';
+        }
+    }
+    catch(e){
+        logMyErrors(e);
+    }
+
+
+    console.log(listShow);});
+
+function open() {
+    console.log("")
+}
 
 function cerrar() {
     ventana.style.display="none";
@@ -11,20 +50,7 @@ function cerrar() {
 
 var put=0;
 function put(){
-    console.log(put);
-    if(put==0){
-    console.log(put);
-
-        chelaL.style.display='block';
-        put=1;
-    console.log(put);
-
-    }
-    else{
-    console.log(put);
-
-        put=0;
-        chelaL.style.display='none';
-    }
+    chelaL.style.display='block'
+    // let s=chelaL.classList.toggle('show');
     console.log(put);
 }
