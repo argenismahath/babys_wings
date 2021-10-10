@@ -101,7 +101,7 @@ h1{
 }
 .aling{
     justify-content: center;
-    display: flex;
+    display: flex !important;
     align-self: center;
 }
 
@@ -120,15 +120,20 @@ h1{
 .show{
     /* general */
     display: block !important;
+    width: 200px;
     position: relative;
-    margin-top: -20px;
-    margin-left: 10%;
+    margin-top: -30px;
+    margin-left: auto;
+  margin-right: auto;
     backdrop-filter: blur(40px);
     border-radius: 20px;
     text-align: left;
-    opacity: 1 !important;
-    /* animations */
-    transition: all 300ms ease-in;
 }
 
+.btn-rotate{
+    transform: rotate(180deg);
+}
+.btn-rotate-origin{
+    transform: rotate(180deg);
+}
 /* oleider dev */ 
