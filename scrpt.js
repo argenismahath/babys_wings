@@ -16,8 +16,15 @@ container.addEventListener('click', (e) => {
     console.log(listShow.style.display);
 
     
-    last=listShow;
+    if (last!='') {
+        last.style.display='none';
+    }
+        console.log(last);
+        last=listShow;
+        
 
+    
+    
     try {
         if (listShow.style.display=='none') {
     
