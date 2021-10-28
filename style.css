@@ -3,6 +3,7 @@ body{
     max-width: 375px;
     background-image: url("background.jpg");
     background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: 100vw 100vh;
 }
 
@@ -136,4 +137,6 @@ h1{
 .btn-rotate-origin{
     transform: rotate(180deg);
 }
-/* oleider dev */ 
+/* oleider dev 
+DEV: OLEIDER JESUS GONZALEZ VETANCOURT
+EMAIL:oleidergonzalez11@gmail.com */
