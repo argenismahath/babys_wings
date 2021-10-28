@@ -29,26 +29,25 @@ container.addEventListener('click', (e) => {
 
         //show and hide main lists
         try {
-            if (last != listShow) {
 
-                if (listShow.style.display == 'none') {
+            if (listShow.style.display == 'none') {
 
-                    listShow.style.display = 'block';
-                    open = true;
+                listShow.style.display = 'block';
+                open = true;
 
-                } else if (listShow.style.display == 'flex') {
+            } else if (listShow.style.display == 'flex') {
 
-                    listShow.style.display = 'block';
-                    open = true;
+                listShow.style.display = 'block';
+                open = true;
 
-                } else if (listShow.style.display == 'block') {
-                    listShow.style.display = 'none';
-                    open = false;
-                } else {
-                    listShow.style.display = 'block';
-                    open = true;
-                }
+            } else if (listShow.style.display == 'block') {
+                listShow.style.display = 'none';
+                open = false;
+            } else {
+                listShow.style.display = 'block';
+                open = true;
             }
+
         }
         catch (e) { }
 
@@ -59,29 +58,42 @@ container.addEventListener('click', (e) => {
             listbtn.classList.add('btn-rotate');
         }
 
+
         if (last != '') {
 
-            console.log(lastbtn + 'hhh');
             let last3 = document.getElementById(lastbtn);
             let lastsections = document.getElementById(last);
 
-            if (last != listShow) {
+            if (lastsections.style.display == 'none' || last!=listShow.id) {
 
                 last3.classList.remove('btn-rotate');
-                console.log(last+'last');
-                lastsections.style.display='none';
+                console.log(last + 'last');
+                lastsections.style.display = 'none';
             }
+
         }
+
+
+        if (last == listShow.id) {
+            counter++;
+            console.log(counter);
+            if (counter > 2) {
+                counter = 3;
+            }
+        } else { counter = 0; }
 
     }
 
     // close the lats list OR open
     try {
         if (now == 'alitas' || now == 'costillas' || now == 'hamburguesa' || now == 'burrito' || now == 'taco' || now == 'jocho' || now == 'nacho' || now == 'bebida') {
+
+
             last2 = e.target.id;
             last = listShow.id;
             lastbtn = listbtn.id;
             console.log('FUNTION CLOSE OR OPEN');
+
 
         }
     } catch (e) { console.log('error ' + e); }
@@ -98,20 +110,6 @@ function put() {
 
     // console.log(s);
 }
-
-let kya = false;
-let check = document.querySelector('#check');
-check.addEventListener("change", (e) => {
-    if (kya == false) {
-        kya = true;
-    } else {
-        kya = false
-    }
-
-
-    console.log(kya);
-});
-
 
 
 
